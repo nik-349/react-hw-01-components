@@ -1,16 +1,18 @@
-function Friends({ friends }) {
-  return friends.map(friend => (
-    <li className="item">
-      <span className="status">{friend.isOnline}</span>
-      <img
-        className="avatar"
-        src={friend.avatar}
-        alt="User avatar"
-        width="48"
-      />
-      <p className="name">{friend.name}</p>
-    </li>
-  ));
+import Friends from './Friends';
+
+function FriendsList({ items }) {
+  return (
+    <ul className="friend-list">
+      {items.map(items => (
+        <Friends
+          key={items.id}
+          isOnline={items.isOnline}
+          name={items.name}
+          avatar={items.avatar}
+        />
+      ))}
+    </ul>
+  );
 }
 
-export default Friends;
+export default FriendsList;

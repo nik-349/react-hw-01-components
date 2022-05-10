@@ -1,18 +1,17 @@
-function StatisticsList({ stats }) {
-  return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+import PropTypes from 'prop-types';
 
-      <ul className="stat-list">
-        {stats.map(option => (
-          <li className="item">
-            <span className="label">{option.label}</span>
-            <span className="percentage">{option.percentage}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
+const StatisticsList = ({ label, percentage }) => {
+  return (
+    <li className="item">
+      <span className="label">{label}</span>
+      <span className="percentage">{percentage}</span>
+    </li>
   );
-}
+};
+
+StatisticsList.propTypes = {
+  label: PropTypes.string,
+  percentage: PropTypes.number,
+};
 
 export default StatisticsList;
