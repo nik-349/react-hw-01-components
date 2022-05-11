@@ -1,4 +1,5 @@
 import TransactionHistory from './TransactionHistory';
+import PropTypes from 'prop-types';
 
 function TransactionList({ items }) {
   return (
@@ -16,5 +17,13 @@ function TransactionList({ items }) {
     </table>
   );
 }
+
+TransactionList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};
 
 export default TransactionList;

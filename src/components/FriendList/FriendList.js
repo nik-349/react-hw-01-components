@@ -1,4 +1,6 @@
 import Friends from './Friends';
+import PropTypes from 'prop-types';
+import './Friends.css';
 
 function FriendsList({ items }) {
   return (
@@ -14,5 +16,13 @@ function FriendsList({ items }) {
     </ul>
   );
 }
+
+FriendsList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 export default FriendsList;

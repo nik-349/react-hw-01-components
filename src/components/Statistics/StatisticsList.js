@@ -1,5 +1,6 @@
 import Statistics from './Statistics';
-
+import PropTypes from 'prop-types';
+import './Statistics.css';
 function StatisticsList({ stats }) {
   return (
     <section className="statistics">
@@ -17,4 +18,11 @@ function StatisticsList({ stats }) {
   );
 }
 
+StatisticsList.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};
 export default StatisticsList;

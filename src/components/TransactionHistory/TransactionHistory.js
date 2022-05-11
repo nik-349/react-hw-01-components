@@ -11,9 +11,9 @@ const TransactionHistory = ({ type, amount, currency }) => {
 };
 
 TransactionHistory.prototype = {
-  type: PropTypes.string,
-  amount: PropTypes.number,
-  currency: PropTypes.number,
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.number.isRequired,
+  currency: PropTypes.number.isRequired,
 };
 
 export default TransactionHistory;

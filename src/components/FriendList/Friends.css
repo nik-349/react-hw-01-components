@@ -1,0 +1,12 @@
+.circle__online {
+  width: 9px;
+  height: 9px;
+  background-color: green;
+  border-radius: 50px;
+}
+.circle__offline {
+  width: 9px;
+  height: 9px;
+  background-color: rgb(192, 11, 11);
+  border-radius: 50px;
+}
