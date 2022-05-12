@@ -1,0 +1,12 @@
+/* .transactionHistory{
+background-color: blueviolet;
+} */
+.type {
+  color: chocolate;
+}
+.amount {
+  color: coral;
+}
+.currency {
+  color: cornflowerblue;
+}

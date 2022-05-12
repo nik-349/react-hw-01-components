@@ -12,8 +12,8 @@ export const App = () => {
   return (
     <div className="container">
       <ProfileList item={user} />
-      <StatisticsList title="Upload stats" stats={data} />
       <FriendsList items={friends} />
+      <StatisticsList title="Upload stats" stats={data} />
       <TransactionList items={transactions} />
     </div>
   );
