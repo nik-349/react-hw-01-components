@@ -1,7 +1,6 @@
 import TransactionHistory from './TransactionHistory';
 import PropTypes from 'prop-types';
 import styles from './TransactionHistory.module.css';
-import classNames from 'classnames';
 function TransactionList({ items, t }) {
   return (
     <table className={styles.transactionHistory}>
