@@ -2,10 +2,6 @@ import PropTypes from 'prop-types';
 import styles from './Profile.module.css';
 
 const ProfileUser = ({
-  username,
-  tag,
-  location,
-  avatar,
   followers,
   views,
   likes,
@@ -13,10 +9,10 @@ const ProfileUser = ({
   return (
     <div className={styles.profile}>
       <div className={styles.description}>
-        <img src={avatar} alt="User avatar" className={styles.avatar} />
-        <p className={styles.name}>{username}</p>
-        <p className={styles.tag}>{tag}</p>
-        <p className={styles.location}>{location}</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="User avatar" className={styles.avatar} />
+        <p className={styles.name}>Petra Marica</p>
+        <p className={styles.tag}>pmarica</p>
+        <p className={styles.location}>Salvador, Brasil</p>
       </div>
 
       <ul className={styles.stats}>
@@ -38,10 +34,6 @@ const ProfileUser = ({
 };
 
 ProfileUser.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
   followers: PropTypes.number.isRequired,
   views: PropTypes.number.isRequired,
   likes: PropTypes.number.isRequired,

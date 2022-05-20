@@ -12,12 +12,12 @@ function TransactionList({ items, t }) {
         </tr>
       </thead>
       <tbody>
-        {items.map(e => (
+        {items.map(({id, type, amount, currency}) => (
           <TransactionHistory
-            key={e.id}
-            type={e.type}
-            amount={e.amount}
-            currency={e.currency}
+            key={id}
+            type={type}
+            amount={amount}
+            currency={currency}
           />
         ))}
       </tbody>
@@ -26,9 +26,13 @@ function TransactionList({ items, t }) {
 }
 
 TransactionList.propTypes = {
+
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
     })
   ),
 };

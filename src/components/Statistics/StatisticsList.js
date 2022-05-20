@@ -7,11 +7,11 @@ function StatisticsList({ stats, title }) {
       {title && <h2 className={styles.title}>{title}</h2>}
 
       <ul className={styles.statList}>
-        {stats.map(elem => (
+        {stats.map(({id,label,percentage}) => (
           <Statistics
-            key={elem.id}
-            label={elem.label}
-            percentage={elem.percentage}
+            key={id}
+            label={label}
+            percentage={percentage}
           />
         ))}
       </ul>
@@ -23,6 +23,8 @@ StatisticsList.propTypes = {
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string,
+      percentage: PropTypes.number
     })
   ),
 };

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styles from './Friends.module.css';
 
-const Friends = ({ isOnline, id, name, avatar }) => {
+const Friends = ({ isOnline, name, avatar }) => {
   return (
     <li className={styles.itemList}>
       <span

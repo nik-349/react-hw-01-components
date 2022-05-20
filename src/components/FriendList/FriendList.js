@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import styles from './Friends.module.css';
 
 function FriendsList({ items }) {
+  
   return (
     <ul className={styles.friendList}>
-      {items.map(items => (
+      {items.map(({id,isOnline,name,avatar}) => (
         <Friends
-          key={items.id}
-          isOnline={items.isOnline}
-          name={items.name}
-          avatar={items.avatar}
+          key={id}
+          isOnline={isOnline}
+          name={name}
+          avatar={avatar}
         />
       ))}
     </ul>
