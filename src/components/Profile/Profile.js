@@ -10,7 +10,7 @@ const ProfileUser = ({
     <div className={styles.profile}>
       <div className={styles.description}>
         <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="User avatar" className={styles.avatar} />
-        <p className={styles.name}>Petra Marica</p>
+        <p className={styles.name}>Pettra Marica</p>
         <p className={styles.tag}>pmarica</p>
         <p className={styles.location}>Salvador, Brasil</p>
       </div>
