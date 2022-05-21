@@ -7,12 +7,8 @@ function StatisticsList({ stats, title }) {
       {title && <h2 className={styles.title}>{title}</h2>}
 
       <ul className={styles.statList}>
-        {stats.map(({id,label,percentage}) => (
-          <Statistics
-            key={id}
-            label={label}
-            percentage={percentage}
-          />
+        {stats.map(({ id, label, percentage }) => (
+          <Statistics key={id} label={label} percentage={percentage} />
         ))}
       </ul>
     </section>
@@ -24,7 +20,8 @@ StatisticsList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       label: PropTypes.string,
-      percentage: PropTypes.number
+      percentage: PropTypes.number,
+      title: PropTypes.string,
     })
   ),
 };

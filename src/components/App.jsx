@@ -1,4 +1,4 @@
-import ProfileList from './Profile/ProfileList';
+import ProfileList from './Profile/Profile';
 import StatisticsList from './Statistics/StatisticsList';
 import FriendsList from './FriendList/FriendList';
 import TransactionList from './TransactionHistory/TransactionList';
@@ -11,7 +11,8 @@ import transactions from '../data/transactions.json';
 export const App = () => {
   return (
     <div className="container">
-      <ProfileList username={user.username}
+      <ProfileList
+        name={user.username}
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
